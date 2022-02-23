@@ -1,22 +1,22 @@
-import React from 'react';
+import { Link } from 'react-router-dom'
 
 const Nav = () => {
     return (
         <div className="ui secondary pointing menu">
-            <a className="item">
+            {/* <Link className="item">
                 Home
-            </a>
-            <a className="item active">
+            </Link> */}
+            <Link className="item" to='students'>
                 Students
-            </a>
-            <a className="item">
+            </Link>
+            {/* <Link className="item">
                 Classes
-            </a>
+            </Link>
             <div className="right menu">
-                <a className="ui item">
+                <Link className="ui item">
                     Login
-                </a>
-            </div>
+                </Link>
+            </div> */}
         </div>
     );
 }
