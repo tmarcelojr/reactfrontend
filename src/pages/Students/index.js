@@ -14,7 +14,7 @@ const Students = () => {
 
     const fetchStudents = async () => {
         try {
-            const response = await axios.get('http://localhost:8080/api/v1/allstudents')
+            const response = await axios.get('https://springbackend-demo.herokuapp.com/api/v1/allstudents')
 
             console.log(response)
             setStudents(response.data)
@@ -26,7 +26,7 @@ const Students = () => {
 
     const deleteStudent = async (id) => {
         try {
-            const response = await axios.delete(`http://localhost:8080/api/v1/student/${id}`)
+            const response = await axios.delete(`https://springbackend-demo.herokuapp.com/api/v1/student/${id}`)
             fetchStudents()
         } catch(err) {
             console.log(err)

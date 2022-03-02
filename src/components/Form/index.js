@@ -20,10 +20,10 @@ const Form = ({ fetchStudents, editForm, studentToEdit }) => {
         try {
             if(editForm) {
                 // EDIT - UPDATING
-                const response = await axios.put(`http://localhost:8080/api/v1/student/${studentToEdit.id}`, newStudent)
+                const response = await axios.put(`https://springbackend-demo.herokuapp.com/api/v1/student/${studentToEdit.id}`, newStudent)
             } else {
                 // ADDING STUDENT
-                const response = await axios.post('http://localhost:8080/api/v1/addstudent', newStudent)
+                const response = await axios.post('https://springbackend-demo.herokuapp.com/api/v1/addstudent', newStudent)
 
                 if(response.status === 200) {
                     setFirstName('')
